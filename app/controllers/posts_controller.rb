@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    
     @username = User.find_by(id:  session[:user_id])
     puts @username
     #   @user_name = session[:user_name]
