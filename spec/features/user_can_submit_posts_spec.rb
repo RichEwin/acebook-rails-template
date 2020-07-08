@@ -28,7 +28,7 @@ RSpec.feature 'Timeline', type: :feature do
     click_link 'New post'
     fill_in 'Message', with: 'Whats the time?'
     click_button 'New Post'
-    expect(page).to have_content("#{Time.now.strftime('%B %d %Y')}")
+    expect(page).to have_content(Time.now.strftime('%B %d %Y, %l:%M%P'))
 
   end
 

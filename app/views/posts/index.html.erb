@@ -39,7 +39,7 @@
                       <a href="#">
                           @username
                       </a>
-                      <small class="text-muted"><p><%= post.created_at.strftime("%B %d %Y, %l:%M%P") %></p></small>
+                      <small class="text-muted"><p><%= (post.created_at + 1*60*60).strftime('%B %d %Y, %l:%M%P') %></p></small>
                   </div>
                   <div class="social-body">
 
