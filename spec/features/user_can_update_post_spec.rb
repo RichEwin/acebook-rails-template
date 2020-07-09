@@ -28,6 +28,7 @@ RSpec.feature 'Timeline', type: :feature do
   #   click_link 'New post'
   #   fill_in 'Message', with: 'Hello world!!'
   #   click_button 'New Post'
+  #   sleep 601
   #   click_link('edit_post')
   #   fill_in 'Message', with: "I'm updated"
   #   click_button 'Update Post'
