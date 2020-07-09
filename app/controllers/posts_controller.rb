@@ -26,9 +26,7 @@ class PostsController < ApplicationController
       @all_users = User.all().where.not(id: @current_user.id)
   end
 
-
   def destroy
-
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to posts_url
