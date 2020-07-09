@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+# rubocop:disable all
 
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  describe 'New User' do
+  describe 'User' do
     it 'creates a new user' do
       post :create, params: { user: { name: 'Emanuele', email: 'ema@test.com', password: '12345' } }
       expect(User.find_by(name: 'Emanuele')).to be

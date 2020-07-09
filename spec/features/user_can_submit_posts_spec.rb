@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable all
 
 require 'rails_helper'
 
@@ -16,7 +17,7 @@ RSpec.describe 'Timeline', type: :feature do
     click_link 'New post'
     fill_in 'Message', with: 'Whats the time?'
     click_button 'New Post'
-    expect(page).to have_content(Time.now.strftime('%B %d %Y').to_s)
+    expect(page).to have_content(Time.now.utc.strftime('%B %d %Y').to_s)
   end
 
   it 'Post can be added with line breaks' do

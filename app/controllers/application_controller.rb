@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     return unless session[:user_id].nil?
+
     redirect_to '/login'
   end
 end
