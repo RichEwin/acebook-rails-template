@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
     p @post.save
     p @post.errors.full_messages
-    
+
     redirect_to posts_path
   end
 
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
 
   def destroy
-    
+
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to posts_url
@@ -33,8 +33,14 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
-    @post.update(message: params[:post][:message])
-    redirect_to posts_url
+    @time_created = @post["created_at"].to_i
+
+    if @time_created + 600 > Time.now.utc.to_i
+      @post.update(message: params[:post][:message])
+      redirect_to posts_url
+    else
+      redirect_to posts_url
+    end
   end
 
   private
