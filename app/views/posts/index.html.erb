@@ -32,11 +32,15 @@
         <ul class="list-group">
 
 <li class="list-group-item" style = "background-color: #4267b2" > <h3 style = "color: white"> Welcome to JJERbook <%= @current_user.name %> </h3> </li>
+ <% if @posts.empty? %>
+<li class="list-group-item"  style = “background-color: white” > <p style = 'color: #4267B2'> Your feed is currently empty. Click New post to start JJering away!  </p>  </li>
 
+<% end %>
 
   </ul>
 </div>
 
+ 
 
 
   <% @posts.each do |post| %>
