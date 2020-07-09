@@ -12,11 +12,7 @@ Rails.application.routes.draw do
   get '/login' => 'users#login'
   post '/login' => 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
-<<<<<<< HEAD
-  get '/profile/' => 'addfriends#index'
-=======
   get '/profile/' => 'friendships#index'
-
   post '/friend' => 'friendships#create'
->>>>>>> master
+
 end
