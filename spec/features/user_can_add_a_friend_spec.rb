@@ -1,15 +1,12 @@
 # frozen_string_literal: true
+# rubocop:disable all
 
 require 'rails_helper'
 
-RSpec.feature 'friendslist', type: :feature do
-  scenario 'Can view friends page' do
-    visit '/signup'
-    fill_in 'user[name]', with: 'Emanuele'
-    fill_in 'user[email]', with: 'ema@test.com'
-    fill_in 'user[password]', with: '12345'
-    click_on 'Create Account'
+RSpec.describe 'friendslist', type: :feature do
+  it 'Can view friends page' do
+    log_in_eman
     click_link 'Emanuele'
-    expect(page).to have_content("Profile Page")
+    expect(page).to have_content('About')
   end
 end

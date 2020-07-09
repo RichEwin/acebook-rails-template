@@ -1,0 +1,39 @@
+<% content_for :login_logout do %>
+<li class="nav-item">
+
+
+            <%= link_to sessions_path , method: :delete, class: "nav-item nav-link", id: "delete_post" do %>
+            Logout
+          </li>
+           <% end %>
+    <% end %>
+
+<div class="container">
+
+<div class="col-md-7">
+
+<ul class="list-group">
+
+<% if @current_user.friends.empty? %> 
+<li class="list-group-item" style = "background-color: #4267b2" > <p style = "color: white"> You have 0 friends, get friending! </p>  </li>
+<% else %> 
+
+ <li class="list-group-item" style = "background-color: #4267b2"> <p style = "color: white"> Your Friends </p> <small ><p style = "color: white">Total: <%= @current_user.friends.count %></p></small>  </li>
+ <% @current_user.friends.each do |one_friend|  %> 
+  <li class="list-group-item">  <%= one_friend.name %>  <small class="text-muted"><p>Friends since: <%= one_friend.updated_at.strftime("%B  %Y") %></p></small>    </li>
+  
+<% end %> 
+<% end %> 
+
+
+ <br>
+ <li class="list-group-item" style = "background-color: #4267b2" > <p style = "color: white"> Your sent friend requests </p> <small ><p style = "color: white">Feature Coming Soon <i class="fa fa-clock-o" aria-hidden="true"></i></p></small> </li>
+  <br>
+
+ <li class="list-group-item" style = "background-color: #4267b2" > <p style = "color: white"> Your pending requests </p> <small ><p style = "color: white">Feature Coming Soon <i class="fa fa-clock-o" aria-hidden="true"></i></p></small>  </li>
+  </ul>
+  <br>
+</div>
+
+
+  

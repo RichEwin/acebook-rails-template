@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# frozen_string_literal: trueß
+# rubocop:disable all
 
 require 'rails_helper'
 

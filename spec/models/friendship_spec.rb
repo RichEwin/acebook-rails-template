@@ -3,5 +3,6 @@
 
 require 'rails_helper'
 
-RSpec.describe SessionsController, type: :controller do
+RSpec.describe Friendship, type: :model do
+  it { is_expected.to be }
 end
