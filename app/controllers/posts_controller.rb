@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
-    @time_created = @post["created_at"].to_i
+    @time_created = @post['created_at'].to_i
 
     if @time_created + 600 > Time.now.utc.to_i
       @post.update(message: params[:post][:message])
