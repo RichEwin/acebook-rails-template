@@ -5,6 +5,7 @@ require 'rails_helper'
 
 RSpec.describe 'Log In', type: :feature do
 
+
   it 'User can log into acebook' do
     visit '/login'
     expect(page).to have_content('Log in')
