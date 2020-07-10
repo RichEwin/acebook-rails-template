@@ -11,14 +11,14 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe 'POST /' do
-    xit 'responds with 200' do
-      post :create, params: { post: { message: 'Hello, world!' } }
-      expect(response).to redirect_to(posts_url)
-    end
+  # describe 'POST /' do
+  #   xit 'responds with 200' do
+  #     post :create, params: { post: { message: 'Hello, world!' } }
+  #     expect(response).to redirect_to(posts_url)
+  #   end
 
-    xit 'creates a post' do
-      post :create, params: { post: { message: 'Hello, world!' } }
+    it 'creates a post' do
+      p post :create, params: { post: { message: 'Hello, world!' } }
       expect(Post.find_by(message: 'Hello, world!')).to be true
     end
   end
@@ -48,4 +48,3 @@ RSpec.describe PostsController, type: :controller do
       # expect(Post.find_by(message: 'Hello, world!')).not_to be
     end
   end
-end
