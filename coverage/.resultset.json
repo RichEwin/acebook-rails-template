@@ -67,10 +67,8 @@
           null,
           1,
           1,
+          null,
           1,
-          null,
-          0,
-          null,
           null,
           null,
           1,
@@ -227,22 +225,8 @@
           null,
           null
         ]
-      },
-      "/Users/student/gitDir/acebook-rails-template/app/controllers/addfriends_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1594307913
+    "timestamp": 1594372538
   }
 }

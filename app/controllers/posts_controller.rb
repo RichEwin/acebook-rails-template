@@ -38,10 +38,8 @@ class PostsController < ApplicationController
 
     if @time_created + 600 > Time.now.utc.to_i
       @post.update(message: params[:post][:message])
-      redirect_to posts_url
-    else
-      redirect_to posts_url
     end
+    redirect_to posts_url
   end
 
   private
