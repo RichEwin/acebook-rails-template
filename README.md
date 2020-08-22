@@ -1,5 +1,7 @@
 # Jjerbook - A Facebook Clone Project
 
+[Project Presentation](https://docs.google.com/presentation/d/1gWtnQ4D-MyP2R6Sh-feavnbzL-ol5f15jrD1RK5cihk/edit?usp=sharing)
+
 ### Developers
 
 - [Jack Perrin](https://github.com/perrinjack)
